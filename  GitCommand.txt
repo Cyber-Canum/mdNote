@@ -11,8 +11,8 @@
 
 % git comit -m
     # attached comment to files
+    !! git config --global core.editor "code --wait"
 
 % git log
     # output the comment history
     !! q is key to close loge file. I thing it uses the Vim editor
-
