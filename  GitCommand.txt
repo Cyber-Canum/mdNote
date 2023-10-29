@@ -1,0 +1,15 @@
+% git init
+    # create instance
+
+% git status
+    # output the status of repository
+
+% git add
+    # add files
+    ! add * - add all files
+
+% git comit -m
+    # attached comment to files
+
+% git log
+    # output the comment history
