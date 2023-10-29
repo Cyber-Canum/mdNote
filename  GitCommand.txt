@@ -6,10 +6,13 @@
 
 % git add
     # add files
-    ! add * - add all files
+    ! add . - add all files in current dir
+    ! add -all add all files
 
 % git comit -m
     # attached comment to files
 
 % git log
     # output the comment history
+    !! q is key to close loge file. I thing it uses the Vim editor
+
