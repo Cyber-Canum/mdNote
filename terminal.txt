@@ -1,0 +1,23 @@
+
+% toch 
+    create file
+
+% mcdir 
+    create dir
+
+% open
+    open .
+    start .
+    # open folder in Finder or Explorer
+
+% ls 
+    ls 
+    ls -a
+    # scan dir 
+
+% pwd
+    # output current path
+
+% rm
+    rm -rf
+    !! delete file or folder
