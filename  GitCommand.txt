@@ -15,7 +15,12 @@
 % git comit
     # attached comment to all files with long comit
     !! git config --global core.editor "code --wait"
+    ! --amend add comment to last changes if you faggot 
 
 % git log
     # output the comment history
     !! q is key to close loge file. I thing it uses the Vim editor
+    ! --oneline - output all logs commin in one line and it's like a history
+
+% git ignore
+    !! touch .gitignore - add rules about files wich  git must ignore
