@@ -1,3 +1,5 @@
+#VSCode Note
+
 % git init
     # create instance
 
@@ -24,3 +26,15 @@
 
 % git ignore
     !! touch .gitignore - add rules about files wich  git must ignore
+
+% git branch
+    #show all branch in repo
+    - git branch [name] add branch in git project 
+
+% git switch 
+    #switch branch like timelaps or time point 
+
+% git checkout
+    - git checkout [name] 
+
+
