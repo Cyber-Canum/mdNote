@@ -33,6 +33,8 @@
 
 % git switch 
     #switch branch like timelaps or time point 
+    - git switch -c [name branch]; -c add new branch and switch
+    
 
 % git checkout
     - git checkout [name] 
