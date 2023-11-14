@@ -21,3 +21,25 @@
 % rm
     rm -rf
     !! delete file or folder
+
+% cat 
+    Display File Contents: To display the contents of a single file, you can use the cat command followed by the file name:
+
+    - cat filename
+    This will print the contents of the file to the terminal.
+
+    Concatenate Files: You can use cat to concatenate multiple files together and display the combined contents:
+
+    - cat file1 file2 file3
+    This will concatenate the contents of file1, file2, and file3 and display them in the terminal.
+
+    Create or Append to a File: By using output redirection, you can create a new file or append to an existing file using cat:
+
+    - cat > newfile.txt
+    This will create a new file named newfile.txt and allow you to enter text from the terminal. Press Ctrl + D to save the content.
+
+    To append to an existing file, you can use the >> operator:
+
+    - cat >> existingfile.txt
+    This will append the content entered from the terminal to the end of existingfile.txt.
+

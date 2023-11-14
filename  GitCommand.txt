@@ -29,14 +29,31 @@
 
 % git branch
     #show all branch in repo
-    - git branch [name] add branch in git project 
+    - git branch [name] add branch in git project
+    !! branch -d [name]; branch -D [name]; deleted branch
 
 % git switch 
     #switch branch like timelaps or time point 
     - git switch -c [name branch]; -c add new branch and switch
     
-
 % git checkout
     - git checkout [name] 
 
+% git merge
+    - merge two branch, but be careful with HEAD
 
+% git diff
+    #see difference only not add in repo!
+    # @@ -1,4         +1,5 @@ 1; 
+    #                  | |
+    #   Line number  <=| |=>  How many  
+    - git diff HEAD [filename]
+    # list ALL (staged & unstaged) changes in the working tree since your last commit 
+    - git diff --staged [filename]
+    # list staged and curent changes in the working tree
+    - git diff branch1..branch2
+    # list difference beetwen two branchs
+    - git diff commit1..commit2
+    # git diff 4e5g6t..3h5k3h0k. list difference beetwen two add comit in repo 
+    - git diff branch1..branch2 [filename]
+    # list difference file beetwen two branchs
