@@ -70,5 +70,18 @@
     # list of LIFO stashed changes
     - git stash drop [stash@{N}]
     # deleted stash 
+
+% git checkout [ID-commit]
+    # HEAD points at that commit, not branch pointer
+    ! git checkout HEAD~[N]
+    # HEAD points at commits 1,2...N before
+    - git checkout HEAD [filename]
+    # Restore [filename] in HEAD 
+    - git checkout -- [filename]
+    # Restore --[filename]
+
+% git restore --source HEAD~[N] [filename] 
+    # restore the contents = git checkout HEAD [filename] or git checkout -- [filename]
+
     
     
