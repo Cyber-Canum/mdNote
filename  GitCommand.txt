@@ -52,8 +52,23 @@
     - git diff --staged [filename]
     # list staged and curent changes in the working tree
     - git diff branch1..branch2
-    # list difference beetwen two branchs
+    # list difference between two branchs
     - git diff commit1..commit2
-    # git diff 4e5g6t..3h5k3h0k. list difference beetwen two add comit in repo 
+    # git diff 4e5g6t..3h5k3h0k. list difference between two add comit in repo 
     - git diff branch1..branch2 [filename]
-    # list difference file beetwen two branchs
+    # list difference file between two branchs
+    ! git diff HEAD HEAD~1 - list difference between last comment
+
+% git stash
+    # save changes befor switch in other branch
+    - git stash pop
+    # return save changes
+    - git stash apply
+    # apply stashed changes to multiply branches (very useful)
+    ! git stash has been LIFO principle
+    - git stash list [stash@{N}]
+    # list of LIFO stashed changes
+    - git stash drop [stash@{N}]
+    # deleted stash 
+    
+    
