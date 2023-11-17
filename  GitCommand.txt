@@ -83,5 +83,18 @@
 % git restore --source HEAD~[N] [filename] 
     # restore the contents = git checkout HEAD [filename] or git checkout -- [filename]
 
+% git reset [commit-hash]
+    # deleted commit in repo, but not changed files
+    - git reset --hard [comit-hash]
+    # deleted commit in repo with files
     
-    
+% git revert [comit-hash]
+    - deleted [comit-hash] changes, but left the comment
+
+% git remote
+    - git remote -v
+    # list with information where was clone the repo
+    - git remote add [name] [url]
+    # connect your repo with GitHub
+    ! Origin is default [name] for GitHub
+
