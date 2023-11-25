@@ -31,6 +31,8 @@
     #show all branch in repo
     - git branch [name] add branch in git project
     !! branch -d [name]; branch -D [name]; deleted branch
+    - git branch -r
+    # list remote branches origin/[branch1]...origin/[branch_N]
 
 % git switch 
     #switch branch like timelaps or time point 
@@ -38,6 +40,8 @@
     
 % git checkout
     - git checkout [name] 
+    - git checkout origin/[branchName]
+    # switch to remote origin/[branchName]
 
 % git merge
     - merge two branch, but be careful with HEAD
@@ -94,7 +98,13 @@
 % git remote
     - git remote -v
     # list with information where was clone the repo
-    - git remote add [name] [url]
-    # connect your repo with GitHub
-    ! Origin is default [name] for GitHub
 
+% git remote add [name] [url]
+    # connect your repo with GitHub
+
+
+% git push oringin [branch-HUB]:[branch-Git]
+    # push [branch-HUB]<-[branch-Git]
+    - git push -u
+    # connect two branches in one link
+    !! git pull --rebase origin master (error: failed to push some refs to )
