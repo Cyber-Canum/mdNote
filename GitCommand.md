@@ -22,86 +22,171 @@ git status
 The `git add` command is employed to include changes made to files in the working directory to the staging area, preparing them for the subsequent commit. It allows users to selectively stage specific changes or entire files before committing them to the repository.
 
 ### Syntax:
-- ```bash
+```bash
 git add <file_name>
-```  ```bash
+``` 
+```bash
 add .
 ```
-
-- ```bash
+```bash
 add -all
 ```
-
-# git add
-   ```
-    # add files
-    ! add . - add all files in current dir
-    ! add -all add all files
-   ```
  
-# `git comit -m`
-    # attached comment to files
+## Git Commit
 
-# git comit
-    # attached comment to all files with long comit
-    !! git config --global core.editor "code --wait"
-    ! --amend add comment to last changes if you faggot 
+The `git commit -m "<commit_message>"` command is employed to save the staged changes to the Git repository. It creates a snapshot of the changes that have been staged using `git add`, along with a descriptive commit message that outlines the modifications made.
+- git config --global core.editor "code --wait"
+- --amend add comment to last changes if you faggot 
 
-# git log
-    # output the comment history
-    !! q is key to close loge file. I thing it uses the Vim editor
-    ! --oneline - output all logs commin in one line and it's like a history
+### Syntax:
+```bash
+git commit -m "<commit_message>"
+```
 
-# git ignore
-    !! touch .gitignore - add rules about files wich  git must ignore
+## Git Log --oneline
 
-# git branch
-    #show all branch in repo
-    - git branch [name] add branch in git project
-    !! branch -d [name]; branch -D [name]; deleted branch
-    - git branch -r
-    # list remote branches origin/[branch1]...origin/[branch_N]
+The `git log --oneline` command is utilized to display a condensed version of the commit history in a Git repository. When executed, it provides a concise listing of commits, showing abbreviated commit hashes along with the commit messages in a single line format.
+- --oneline - output all logs commin in one line and it's like a history
+- q is key to close loge file. I thing it uses the Vim editor
 
-# git switch 
-    #switch branch like timelaps or time point 
-    - git switch -c [name branch]; -c add new branch and switch
-    
-# git checkout
-    - git checkout [name] 
-    - git checkout origin/[branchName]
-    # switch to remote origin/[branchName]
+### Syntax:
+```bash
+git log --oneline
+```
 
-# git merge
-    - merge two branch, but be careful with HEAD
+## Git Ignore
 
-# git diff
+The `.gitignore` file tells Git what files or directories to ignore, ensuring they aren't tracked or committed. It helps exclude unnecessary or sensitive files like log files, compiled binaries, or user-specific settings. Simply list filenames, patterns, or directories in this file to keep your repository clean and focused on essential code and assets.
+- touch .gitignore - add rules about files wich  git must ignore
+
+
+## Git Branch
+
+The `git branch` command is used in Git to manage branches within a repository. It displays, creates, deletes, renames, or lists branches in the repository. Additionally, it allows users to switch between branches or set a specific branch as the current working branch.
+
+*Usage:*
+- git branch <branch_name>: Creates a new branch with the specified name.
+- git branch -d <branch_name>: Deletes the specified branch (if merged).
+- git branch -m <old_branch_name> <new_branch_name>: Renames an existing branch.
+- git branch -a: Lists all local and remote branches in the repository.
+- git branch -r . list remote branches origin/[branch1]...origin/[branch_N]
+
+### Syntax:
+```bash
+git branch <branch_name>
+```
+```bash
+git branch -d <branch_name>
+```
+```bash
+git branch -m <old_branch_name> <new_branch_name>
+```
+```bash
+git branch -a
+```
+```bash
+git branch -r
+```
+
+## Git Switch
+
+The `git switch` command in Git is used to switch between branches or restore working tree files. Introduced in Git version 2.23, `git switch` primarily focuses on branch switching compared to the traditional `git checkout` command.
+
+*Usage:*
+- git switch <branch_name>: Moves the HEAD pointer to the specified branch.
+- git switch -c <new_branch_name>: Creates a new branch from the current HEAD position and switches to it.
+
+### Syntax:
+```bash
+git switch <branch_name>
+```
+```bash
+git switch -c <new_branch_name>
+```
+## Git Checkout
+
+The `git checkout` command in Git is a versatile tool used to switch branches, restore files from different commits or branches, and even create new branches. It's a powerful command that allows users to navigate through the repository's history and manage branches effectively.
+*Usage:*
+- git checkout <branch_name>: Moves the HEAD pointer to the specified branch, making it the active branch.
+- git checkout -b <new_branch_name>: Creates a new branch from the current HEAD position and switches to it.
+- git checkout <commit_hash> -- <file_name>: Restores the specified file from a specific commit, replacing the current version  in the working directory.
+
+### Syntax:
+```bash
+git checkout <branch_name>
+```
+```bash
+git checkout -b <new_branch_name>
+```
+```bash
+git checkout <commit_hash> -- <file_name>
+```
+## Git Merge
+
+The `git merge` command in Git is utilized to combine changes from one branch into another. It integrates the changes introduced in a specified branch into the current branch, thereby incorporating the commits from the source branch.
+- merge two branch, but be careful with HEAD
+### Syntax:
+```bash
+git merge <branch_name>
+```
+## Git Diff
+
+The `git diff` command in Git is used to display the differences or changes between various states of a Git repository. It shows the variations between commits, the working directory, and the staging area, allowing users to inspect modifications made to files.
+*Usage:*
+- git diff: Shows changes between the working directory and the staging area.
+- git diff <commit_A> <commit_B>: Displays differences between two commits.
+- git diff <file_name>: Reveals changes made to a specific file.
+- git diff HEAD [filename] list ALL (staged & unstaged) changes in the working tree since your last commit 
+- git diff --staged [filename] list staged and curent changes in the working tree
+  
+### Syntax:
+```bash
+git diff
+```
+```bash
+git diff <commit_A> <commit_B>
+```
+```bash
+git diff <file_name>
+```
+```bash
+git diff HEAD [filename] 
+```
+```bash
+git diff --staged 
+```
+```bash
+git diff HEAD HEAD~1
+```
+
     #see difference only not add in repo!
     # @@ -1,4         +1,5 @@ 1; 
     #                  | |
     #   Line number  <=| |=>  How many  
-    - git diff HEAD [filename]
-    # list ALL (staged & unstaged) changes in the working tree since your last commit 
-    - git diff --staged [filename]
-    # list staged and curent changes in the working tree
-    - git diff branch1..branch2
-    # list difference between two branchs
-    - git diff commit1..commit2
-    # git diff 4e5g6t..3h5k3h0k. list difference between two add comit in repo 
-    - git diff branch1..branch2 [filename]
-    # list difference file between two branchs
-    ! git diff HEAD HEAD~1 - list difference between last comment
 
-# git stash
-    # save changes befor switch in other branch
-    - git stash pop
-    # return save changes
-    - git stash apply
-    # apply stashed changes to multiply branches (very useful)
-    ! git stash has been LIFO principle
-    - git stash list [stash@{N}]
-    # list of LIFO stashed changes
-    - git stash drop [stash@{N}]
-    # deleted stash 
+
+## Git Stash
+
+The `git stash` command in Git allows users to temporarily store changes in a 'stash,' enabling them to switch branches or perform other operations without committing the changes.
+Usage:
+- git stash: Stores the modifications in a stash, reverting the working directory to the last commit state.
+- git stash apply: Applies the most recent stash to the working directory without removing it from the stash list.
+- git stash list: Lists all stashes, displaying their IDs and descriptions.
+- git stash drop: Removes the most recent stash from the stash list.
+
+### Syntax:
+```bash
+git stash
+```
+```bash
+git stash apply
+```
+```bash
+git stash list
+```
+```bash
+git stash drop
+```
 
 # git checkout [ID-commit]
     # HEAD points at that commit, not branch pointer
