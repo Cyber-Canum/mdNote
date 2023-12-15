@@ -1,9 +1,36 @@
 
-# git init
-    create instance
+## Git Init
 
-# git status
-    # output the status of repository
+The `git init` command is utilized to initialize a new Git repository within a directory. When executed within a folder, it sets up all the necessary data structures and files, allowing Git to start tracking changes within that directory. This command creates a hidden subfolder named `.git`, which contains the versioning information and configuration files essential for Git operations within the repository.
+
+### Syntax:
+```bash
+git init
+```
+
+## Git Status
+
+The `git status` command is used to obtain information regarding the current state of the Git repository. When executed, it displays details about tracked, untracked, modified, and staged files. It provides valuable insights into which files have been altered, which are staged for commit, and which files are yet to be tracked by Git.
+
+### Syntax:
+```bash
+git status
+```
+
+## Git Add
+
+The `git add` command is employed to include changes made to files in the working directory to the staging area, preparing them for the subsequent commit. It allows users to selectively stage specific changes or entire files before committing them to the repository.
+
+### Syntax:
+- ```bash
+git add <file_name>
+```  ```bash
+add .
+```
+
+- ```bash
+add -all
+```
 
 # git add
    ```
@@ -138,3 +165,25 @@
     - --tags - push all tags
   
 # git config --local 
+
+# echo "Hello World" | git hash-object --stdin -w
+    - return hash ssh1
+    - parametr -w is write to folder .git\objects\ce
+# git cat-file -p [hash]
+    - revers method for echo "Hello World" | git hash-object --stdin -w
+
+# git reflog show
+    - show track, history og log
+    - use in combo command got checkout HEAD~2 or [hash-commit]
+
+# usefull commande with time point
+    - git diff HEAD HEAD@{yesterday}
+    - git diff master master@{yesterday}
+    - git reflog show HEAD@{2.days.ago}
+    - git reflog show HEAD@{one.minute.ago}
+    - git checkout master@{1.week.ago}
+  
+  # git rebase -i HEAD~4
+  
+  # cat ~/.gitconfig ---- code ~/.gitconfig
+
